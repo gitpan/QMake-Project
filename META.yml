@@ -1,0 +1,35 @@
+--- #YAML:1.0
+name:               QMake-Project
+version:            0.80
+abstract:           perl interface to qmake .pro file(s)
+author:
+    - Rohan McGovern <rohan@mcgovern.id.au>
+license:            lgpl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Carp:              0
+    File::Basename:    0
+    File::chdir:       0
+    File::Temp:        0
+    File::Which:       0
+    IO::File:          0
+    List::MoreUtils:   0
+    Readonly:          0
+    ReleaseAction:     0
+    Scalar::Defer:     0
+    Test::Exception:   0
+    Test::More:        0
+    Test::Warn:        0
+    Text::ParseWords:  0
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.57_05
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
