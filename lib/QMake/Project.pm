@@ -2,7 +2,7 @@ package QMake::Project;
 use strict;
 use warnings;
 
-our $VERSION = '0.80';
+our $VERSION = '0.81';
 
 use Carp;
 use English qw(-no_match_vars);
@@ -274,6 +274,9 @@ sub _parse_qmake_command
                 nodepend
                 nomoc
                 nopwd
+                macx
+                unix
+                win32
             )),
             map( { $_ => $sub_accept_option_with_value } qw(
                 unset=s
