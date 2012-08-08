@@ -33,4 +33,4 @@ requires:
   Test::More: 0
   Test::Warn: 0
   Text::ParseWords: 0
-version: 0.83
+version: 0.84
