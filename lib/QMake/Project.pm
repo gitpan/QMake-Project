@@ -2,7 +2,7 @@ package QMake::Project;
 use strict;
 use warnings;
 
-our $VERSION = '0.84';
+our $VERSION = '0.85';
 
 use Carp;
 use English qw(-no_match_vars);
@@ -14,15 +14,14 @@ use File::chdir;
 use Getopt::Long qw(GetOptions);
 use IO::File;
 use List::MoreUtils qw(apply);
-use Readonly;
 use ReleaseAction qw(on_release);
 use Scalar::Defer qw(lazy);
 use Text::ParseWords;
 
-Readonly my $WINDOWS => ($OSNAME =~ m{win32}i);
+my $WINDOWS = ($OSNAME =~ m{win32}i);
 
 # Magic string denoting we've deliberately exited qmake early
-Readonly my $MAGIC_QMAKE_EXIT_STRING => __PACKAGE__.':EXITING';
+my $MAGIC_QMAKE_EXIT_STRING = __PACKAGE__.':EXITING';
 
 sub new
 {
